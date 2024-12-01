@@ -17,6 +17,10 @@ public class Shooting : MonoBehaviour
     private bool isReloading = false;
     public int damagePerShot = 10;
 
+    public AudioSource soundAudioSource;
+    public AudioClip shootingSoundClip;
+    public AudioClip reloadSoundClip;
+
         // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +82,7 @@ public class Shooting : MonoBehaviour
             }
             animator.SetBool("Shoot", true);
             currentAmmo--;
+            soundAudioSource.PlayOneShot(shootingSoundClip);
         }
         else
         {
@@ -94,6 +99,7 @@ public class Shooting : MonoBehaviour
             animator.SetTrigger("Reload");
             isReloading = true;
             //reload sound
+            soundAudioSource.PlayOneShot(reloadSoundClip);
             Invoke("FinishReloading", reloadTime); 
 
         }
