@@ -15,7 +15,7 @@ public class WaypointZombieAI : MonoBehaviour
     public float attackDelay = 1.5f;
     public NavMeshAgent navAgent;
     private bool isAttacking;
-    private bool isMoving;
+    private bool isChasing;
     private float lastAttackTime;
     public int damage = 10;
     public int health = 100;
@@ -37,7 +37,7 @@ public class WaypointZombieAI : MonoBehaviour
       switch(currentState)
         {
             case ZombieState.Walk:
-                if (!isMoving || navAgent.remainingDistance < 0.1f) {
+                if (!isChasing || navAgent.remainingDistance < 0.1f) {
                     Walk();
                 }
                 if (IsPlayerInRange(chaseDistance))
@@ -88,7 +88,7 @@ public class WaypointZombieAI : MonoBehaviour
         navAgent.speed = 0.3f;
         Vector3 randomposition = RandomNavMeshPosition();
         navAgent.SetDestination(randomposition);
-        isMoving = true;
+        isChasing = true;
     }
 
     private Vector3 RandomNavMeshPosition()
