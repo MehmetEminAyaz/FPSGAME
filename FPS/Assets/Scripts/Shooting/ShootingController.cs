@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour
     private int currentAmmo;
     public float reloadTime = 1.5f;
     private bool isReloading = false;
+    public int damagePerShot = 10;
 
         // Start is called before the first frame update
     void Start()
@@ -68,6 +69,12 @@ public class Shooting : MonoBehaviour
             if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, fireRange))
             {
                 Debug.Log(hit.transform.name);
+
+                ZombieAI zombieAI = hit.collider.GetComponent<ZombieAI>();
+                if (zombieAI != null)
+                {
+                    zombieAI.TakeDamage(damagePerShot);
+                }
             }
             animator.SetBool("Shoot", true);
             currentAmmo--;

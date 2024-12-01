@@ -6,6 +6,9 @@ using UnityEngine.Rendering.Universal;
 
 public class Movement : MonoBehaviour
 {
+    [Header("Player Health & Damage")]
+    private int maxHealth = 100;
+    public int currentHealth;
     [Header("Player Movement")]
     public float speed = 5f;
     public float jumpForce = 2f;
@@ -27,6 +30,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        currentHealth = maxHealth;
         characterController = GetComponent<CharacterController>();
         
     }
@@ -82,5 +86,19 @@ public class Movement : MonoBehaviour
             rightFootAudioSource.PlayOneShot(footStepClip);
         }
         isLeftFootStep=!isLeftFootStep;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        if(currentHealth < 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+
     }
 }
