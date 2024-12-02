@@ -79,6 +79,11 @@ public class Shooting : MonoBehaviour
                 {
                     zombieAI.TakeDamage(damagePerShot);
                 }
+                WaypointZombieAI waypointZombieAI = hit.collider.GetComponent<WaypointZombieAI>();
+                if (waypointZombieAI != null)
+                {
+                    waypointZombieAI.TakeDamage(damagePerShot);
+                }
             }
             animator.SetBool("Shoot", true);
             currentAmmo--;
