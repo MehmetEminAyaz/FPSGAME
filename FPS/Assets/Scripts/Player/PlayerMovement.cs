@@ -93,12 +93,13 @@ public class Movement : MonoBehaviour
         currentHealth -= damageAmount;
         if(currentHealth < 0)
         {
+            currentHealth = 0;
             Die();
         }
     }
 
     private void Die()
     {
-
+        Debug.Log("Dead");
     }
 }

@@ -59,7 +59,7 @@ public class ZombieAI : MonoBehaviour
             case ZombieState.Attack:
                 animator.SetBool("IsAttacking", true);
                 navAgent.SetDestination(transform.position);
-                if (isAttacking && Time.time - lastAttackTime >= attackCooldown)
+                if (!isAttacking && Time.time - lastAttackTime >= attackCooldown)
                 {
                     StartCoroutine(AttackWithDelay());
                     Debug.Log("Attack Player");
