@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-
+using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
     [Header("Player Health & Damage")]
     private int maxHealth = 100;
     public int currentHealth;
+    public Image healthBar;
+    
     [Header("Player Movement")]
     public float speed = 5f;
     public float jumpForce = 2f;
@@ -31,8 +33,10 @@ public class Movement : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        characterController = GetComponent<CharacterController>();
         
+        characterController = GetComponent<CharacterController>();
+        UpdateHealthBar();
+
     }
 
     void Update()
@@ -96,10 +100,15 @@ public class Movement : MonoBehaviour
             currentHealth = 0;
             Die();
         }
+        UpdateHealthBar();
     }
 
     private void Die()
     {
         Debug.Log("Dead");
+    }
+    private void UpdateHealthBar()
+    {
+        healthBar.fillAmount = (float)currentHealth / maxHealth; // Doluluk oranýný ayarla
     }
 }

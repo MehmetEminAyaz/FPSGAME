@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class Shooting : MonoBehaviour
 {
     public Animator animator;
@@ -13,6 +14,7 @@ public class Shooting : MonoBehaviour
     public bool isAuto = false;
     public int maxAmmo = 30;
     private int currentAmmo;
+    public TMP_Text ammoText;
     public float reloadTime = 1.5f;
     private bool isReloading = false;
     public int damagePerShot = 10;
@@ -25,6 +27,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         currentAmmo = maxAmmo;
+        UpdateAmmoText();
     }
 
     // Update is called once per frame
@@ -87,6 +90,7 @@ public class Shooting : MonoBehaviour
             }
             animator.SetBool("Shoot", true);
             currentAmmo--;
+            UpdateAmmoText();
             soundAudioSource.PlayOneShot(shootingSoundClip);
         }
         else
@@ -113,10 +117,14 @@ public class Shooting : MonoBehaviour
     private void FinishReloading()
     {
         currentAmmo = maxAmmo;
+        UpdateAmmoText();
         isReloading = false;
         animator.ResetTrigger("Reload");
     }
 
-    
-    
+    private void UpdateAmmoText()
+    {
+        ammoText.text = "Ammo: " + currentAmmo + "/" + maxAmmo;
+    }
+
 }
