@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ZombieAI : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class ZombieAI : MonoBehaviour
     private bool isAttacking;
     private float lastAttackTime;
     public int damage = 10;
-    public int health = 100;
+    public float health = 100f;
+    private float maxHealth = 100f;
+    public Image healthBar;
     private CapsuleCollider capsuleCollider;
     public GameObject BloodScreen;
     private GameObject instantiatedObject;
@@ -42,6 +45,7 @@ public class ZombieAI : MonoBehaviour
         navAgent = GetComponent<NavMeshAgent>();
         lastAttackTime = -attackCooldown;
         animator = GetComponent<Animator>();
+        UpdateHealthbar();
 
     }
      void Update()
@@ -146,12 +150,18 @@ public class ZombieAI : MonoBehaviour
             Die();
 
         }
+        UpdateHealthbar();
     }
 
     private void Die()
     {
         currentState = ZombieState.Dead;
 
+    }
+    private void UpdateHealthbar()
+    {
+        healthBar.fillAmount = health / maxHealth;
+        Debug.Log("Healthbar Updated: " + healthBar.fillAmount);
     }
 }
 

@@ -9670,6 +9670,7 @@ MonoBehaviour:
   navAgent: {fileID: 171509412}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &171509411
@@ -9986,6 +9987,7 @@ MonoBehaviour:
   navAgent: {fileID: 173800445}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &173800444
@@ -11661,6 +11663,7 @@ MonoBehaviour:
   navAgent: {fileID: 197863269}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &197863268
@@ -21824,6 +21827,7 @@ MonoBehaviour:
   navAgent: {fileID: 362316317}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &362316316
@@ -22372,6 +22376,7 @@ MonoBehaviour:
   navAgent: {fileID: 369258296}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &369258295
@@ -27657,7 +27662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefabs:
-  - {fileID: 3214558326052980329, guid: 47c05735881643d4a804cec88ff3fa3c, type: 3}
+  - {fileID: 7846693144417950737, guid: 6cbb3cb79c87a9e40a51845916be126b, type: 3}
   spawnPoints:
   - {fileID: 1136211183}
   - {fileID: 767584125}
@@ -27780,6 +27785,7 @@ MonoBehaviour:
   navAgent: {fileID: 472262129}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &472262128
@@ -31864,6 +31870,7 @@ MonoBehaviour:
   navAgent: {fileID: 541103578}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &541103577
@@ -36692,6 +36699,7 @@ MonoBehaviour:
   navAgent: {fileID: 635323906}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &635323905
@@ -39260,6 +39268,74 @@ Transform:
   - {fileID: 1781092073}
   m_Father: {fileID: 1665959028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &697006508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5295296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007989787364810293, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846693144417950737, guid: 6cbb3cb79c87a9e40a51845916be126b,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombie 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cbb3cb79c87a9e40a51845916be126b, type: 3}
 --- !u!4 &697180563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 64438420d273554448959a35c747f25a,
@@ -50443,6 +50519,7 @@ MonoBehaviour:
   navAgent: {fileID: 876690909}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &876690908
@@ -52012,6 +52089,7 @@ MonoBehaviour:
   navAgent: {fileID: 906258099}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &906258098
@@ -68055,6 +68133,7 @@ MonoBehaviour:
   navAgent: {fileID: 1178389287}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1178389286
@@ -74107,6 +74186,7 @@ MonoBehaviour:
   navAgent: {fileID: 1277233123}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1277233122
@@ -77368,6 +77448,7 @@ MonoBehaviour:
   navAgent: {fileID: 1336881256}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1336881255
@@ -94015,6 +94096,7 @@ MonoBehaviour:
   navAgent: {fileID: 1655842266}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1655842265
@@ -94419,6 +94501,7 @@ MonoBehaviour:
   navAgent: {fileID: 1661107188}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1661107187
@@ -104246,6 +104329,7 @@ MonoBehaviour:
   navAgent: {fileID: 1840440577}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1840440576
@@ -111830,6 +111914,7 @@ MonoBehaviour:
   navAgent: {fileID: 1970917013}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1970917012
@@ -112521,6 +112606,7 @@ MonoBehaviour:
   navAgent: {fileID: 1980329860}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1980329859
@@ -113576,6 +113662,7 @@ MonoBehaviour:
   navAgent: {fileID: 1991104069}
   damage: 10
   health: 100
+  healthBar: {fileID: 0}
   BloodScreen: {fileID: 8597501450511136014, guid: 29e46d4afdf8b6143a3121329de2c11f,
     type: 3}
 --- !u!136 &1991104068
@@ -122632,3 +122719,4 @@ SceneRoots:
   - {fileID: 914428762}
   - {fileID: 1966365750}
   - {fileID: 1305545687}
+  - {fileID: 697006508}
